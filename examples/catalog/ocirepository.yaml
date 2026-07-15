@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: OCIRepository
+metadata:
+  name: catalog-package
+  namespace: catalog
+spec:
+  interval: 5m
+  url: oci://registry.localhost:5000/mosaic/catalog-deployment
+  ref:
+    tag: latest

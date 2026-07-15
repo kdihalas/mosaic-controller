@@ -1,0 +1,12 @@
+resources:
+  - ../default
+patches:
+  - target:
+      kind: Deployment
+      name: mosaic-controller
+    patch: |-
+      - op: add
+        path: /spec/template/metadata/annotations
+        value:
+          prometheus.io/scrape: "true"
+          prometheus.io/port: "8080"

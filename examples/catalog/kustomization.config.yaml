@@ -1,0 +1,5 @@
+resources:
+  - namespace.yaml
+  - ocirepository.yaml
+  - mosaicrelease.yaml
+  - kustomization.yaml

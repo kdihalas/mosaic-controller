@@ -1,0 +1,7 @@
+namespace: mosaic-system
+resources:
+  - namespace.yaml
+  - ../crd
+  - ../rbac
+  - ../manager
+  - ../network-policy

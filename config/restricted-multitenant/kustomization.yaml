@@ -1,0 +1,11 @@
+resources:
+  - ../production
+  - egress-network-policy.yaml
+patches:
+  - target:
+      kind: Deployment
+      name: mosaic-controller
+    patch: |-
+      - op: add
+        path: /spec/template/spec/containers/0/args/-
+        value: --no-cross-namespace-refs=true

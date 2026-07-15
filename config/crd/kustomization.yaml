@@ -1,0 +1,2 @@
+resources:
+  - bases/mosaic.toolkit.fluxcd.io_mosaicreleases.yaml

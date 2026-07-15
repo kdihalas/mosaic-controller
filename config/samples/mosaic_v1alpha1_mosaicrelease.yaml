@@ -1,0 +1,24 @@
+apiVersion: mosaic.toolkit.fluxcd.io/v1alpha1
+kind: MosaicRelease
+metadata:
+  name: catalog-api
+  namespace: catalog
+spec:
+  interval: 10m
+  retryInterval: 1m
+  timeout: 2m
+  sourceRef:
+    apiVersion: source.toolkit.fluxcd.io/v1
+    kind: OCIRepository
+    name: catalog-package
+  path: ./
+  inputKind: Project
+  environment: prod
+  variants:
+    - production
+    - restricted
+  policy:
+    failureMode: Fail
+  output:
+    includeBundleMetadata: true
+    includePolicyReport: true

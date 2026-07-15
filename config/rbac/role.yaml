@@ -1,0 +1,26 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: mosaic-controller
+rules:
+  - apiGroups: ["mosaic.toolkit.fluxcd.io"]
+    resources: ["mosaicreleases"]
+    verbs: ["get", "list", "watch", "update", "patch"]
+  - apiGroups: ["mosaic.toolkit.fluxcd.io"]
+    resources: ["mosaicreleases/status"]
+    verbs: ["get", "update", "patch"]
+  - apiGroups: ["source.toolkit.fluxcd.io"]
+    resources: ["ocirepositories"]
+    verbs: ["get", "list", "watch"]
+  - apiGroups: ["source.toolkit.fluxcd.io"]
+    resources: ["externalartifacts"]
+    verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
+  - apiGroups: ["source.toolkit.fluxcd.io"]
+    resources: ["externalartifacts/status"]
+    verbs: ["get", "update", "patch"]
+  - apiGroups: [""]
+    resources: ["events"]
+    verbs: ["create", "patch"]
+  - apiGroups: ["coordination.k8s.io"]
+    resources: ["leases"]
+    verbs: ["get", "list", "watch", "create", "update", "patch"]

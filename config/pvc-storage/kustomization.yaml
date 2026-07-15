@@ -1,0 +1,15 @@
+resources:
+  - ../production
+  - pvc.yaml
+patches:
+  - target:
+      kind: Deployment
+      name: mosaic-controller
+    patch: |-
+      - op: replace
+        path: /spec/template/spec/volumes/0/emptyDir
+        value: null
+      - op: add
+        path: /spec/template/spec/volumes/0/persistentVolumeClaim
+        value:
+          claimName: mosaic-controller-storage

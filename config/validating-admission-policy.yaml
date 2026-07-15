@@ -1,0 +1,23 @@
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingAdmissionPolicy
+metadata:
+  name: trusted-mosaic-artifact-url
+spec:
+  failurePolicy: Fail
+  matchConstraints:
+    resourceRules:
+      - apiGroups: ["source.toolkit.fluxcd.io"]
+        apiVersions: ["v1"]
+        operations: ["CREATE", "UPDATE"]
+        resources: ["externalartifacts/status"]
+  validations:
+    - expression: "object.spec.sourceRef == null || object.spec.sourceRef.kind != 'MosaicRelease' || object.status.artifact == null || object.status.artifact.url.startsWith('http://mosaic-controller.mosaic-system.svc.cluster.local:9090/')"
+      message: MosaicRelease artifact URLs must use the trusted mosaic-controller service.
+---
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingAdmissionPolicyBinding
+metadata:
+  name: trusted-mosaic-artifact-url
+spec:
+  policyName: trusted-mosaic-artifact-url
+  validationActions: [Deny]
