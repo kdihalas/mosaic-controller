@@ -7,7 +7,7 @@ require (
 	github.com/fluxcd/pkg/artifact v0.20.0
 	github.com/fluxcd/pkg/runtime v0.111.0
 	github.com/fluxcd/source-controller/api v1.9.3
-	github.com/kdihalas/mosaic v0.0.0-20260715201918-d5fdeb1698eb
+	github.com/kdihalas/mosaic v0.0.0-20260716003743-5293a7056047
 	github.com/kdihalas/mosaic-controller/api v0.0.0
 	github.com/prometheus/client_golang v1.23.2
 	github.com/spf13/pflag v1.0.10

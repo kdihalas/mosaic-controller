@@ -139,6 +139,8 @@ github.com/json-iterator/go v1.1.12 h1:PV8peI4a0ysnczrg+LtxykD8LfKY9ML6u2jnxaEnr
 github.com/json-iterator/go v1.1.12/go.mod h1:e30LSqwooZae/UwlEbR2852Gd8hjQvJoHmT4TnhNGBo=
 github.com/kdihalas/mosaic v0.0.0-20260715201918-d5fdeb1698eb h1:HY+Ki+PvlwbAc1zpby7Havt04HzwbeTNvAAi6ypz8JU=
 github.com/kdihalas/mosaic v0.0.0-20260715201918-d5fdeb1698eb/go.mod h1:bX+p/duEwLN6OwqvO+bEVc54YlkpygzHf18lB1/ioFU=
+github.com/kdihalas/mosaic v0.0.0-20260716003743-5293a7056047 h1:IWCQLDWzwRJZCytRqzYyiSIV7qCPHX+MCD+SY7WThCI=
+github.com/kdihalas/mosaic v0.0.0-20260716003743-5293a7056047/go.mod h1:bX+p/duEwLN6OwqvO+bEVc54YlkpygzHf18lB1/ioFU=
 github.com/klauspost/compress v1.18.5 h1:/h1gH5Ce+VWNLSWqPzOVn6XBO+vJbCNGvjoaGBFW2IE=
 github.com/klauspost/compress v1.18.5/go.mod h1:cwPg85FWrGar70rWktvGQj8/hthj3wpl0PGDogxkrSQ=
 github.com/klauspost/cpuid/v2 v2.0.12/go.mod h1:g2LTdtYhdyuGPqyWyv7qRAmj1WBqxuObKfj5c0PQa7c=
